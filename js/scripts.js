@@ -13,7 +13,13 @@ function checkDetails()
     }
     else
     {
-        alert("Form has been submitted")
-        return true
+        warning.innerHTML = "Form submitted successfully!";
+        warning.style.color = "green";
+
+        document.getElementById('formbody').reset();
+
+        setTimeout(() => {
+        warning.innerHTML = "";
+        }, 3000);
     }
 }
